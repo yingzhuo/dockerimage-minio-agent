@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}]%-5level %logger{72}[%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- framework -->
+    <logger name="com.innshine.fastaiplot" additivity="true" level="trace"/>
+    <logger name="org.springframework" additivity="true" level="info"/>
+    <logger name="org.springframework.boot.context.ApplicationPidFileWriter" additivity="true" level="error"/>
+    <logger name="org.hibernate" additivity="true" level="info"/>
+    <logger name="org.hibernate.validator" additivity="true" level="warn"/>
+    <logger name="org.jboss.logging" additivity="true" level="warn"/>
+    <logger name="org.apache.coyote" additivity="true" level="warn"/>
+    <logger name="org.apache.catalina" additivity="true" level="warn"/>
+    <logger name="_org.springframework.web.servlet.HandlerMapping.Mappings" additivity="true" level="info"/>
+    <logger name="com.zaxxer.hikari" additivity="true" level="info"/>
+    <logger name="org.ehcache" additivity="true" level="info"/>
+    <logger name="org.terracotta" additivity="true" level="info"/>
+    <logger name="io.micrometer" additivity="true" level="info"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
